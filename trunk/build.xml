@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="roteiro2arc" default="jar" basedir=".">
+        <property name="src.dir"     value="src"/>
+        <property name="build.dir"   value="build"/>
+        <property name="classes.dir" value="${build.dir}/classes"/>
+        <property name="jar.dir"     value="${build.dir}/jar"/>
+        <property name="lib.dir"     value="lib"/>
+	<property name="url-extraction-class" value="pt.tomba.roteiro2arc.ExtractURL"/>
+	<property name="arc-converter-class" value="pt.tomba.roteiro2arc.ArcConverter"/>
+
+        <path id="classpath">
+                <fileset dir="${lib.dir}" includes="**/*.jar"/>
+        </path>
+
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${classes.dir}"/>
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath"/>
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="${jar.dir}"/>
+		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}"/>
+	</target>
+
+	<target name="run-url-extraction" depends="jar">
+                <java fork="true" classname="${url-extraction-class}">
+                        <classpath>
+                                <path refid="classpath"/>
+                                <path location="${jar.dir}/${ant.project.name}.jar"/>
+                        </classpath>
+                        <arg value="${source}"/>
+                        <arg value="${db}"/>
+                </java>
+        </target>
+
+	<target name="run-arc-conversion" depends="jar">
+                <java fork="true" classname="${arc-converter-class}">
+                        <classpath>
+                                <path refid="classpath"/>
+                                <path location="${jar.dir}/${ant.project.name}.jar"/>
+                        </classpath>
+                        <arg value="${source}"/>
+			<arg value="${destination}"/>
+                        <arg value="${db}"/>
+                        <arg value="${recovery-db}"/>
+                </java>
+        </target>
+
+	<target name="run" depends="run-url-extraction,run-arc-conversion"/>
+
+</project>
