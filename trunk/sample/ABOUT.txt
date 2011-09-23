@@ -1,0 +1,4 @@
+This folder contains a sample of the crawl in the CD-ROM of "Novo Roteiro Prático da Internet" by José Magalhães.
+
+Use it to understand how Roteiro2Arc works
+Use it to test Roteiro2Arc

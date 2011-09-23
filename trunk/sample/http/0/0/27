@@ -1,0 +1,55 @@
+<A name = 0>
+<TITLE>Xerox PARC Map Viewer: world 0.00N 0.00E (1.0X)</TITLE>
+<H2><A HREF="../../0/0/24.htm">Xerox</A>
+<A HREF="../../0/0/25.htm">PARC</A> Map Viewer: world 0.00N 0.00E (1.0X)</H2>
+    <A HREF="../../dium.htm"><IMG SRC="../../0/0/57.gif"  ></A>
+    <P>
+    Select a point on the map to zoom in (by 2), or select an option below.
+
+Please read <A HREF="../../dium.htm">About the Map Viewer</A>,
+<A HREF="../../dium.htm">FAQ</A>
+and <A HREF="../../dium.htm">Details</A>.
+To find a U.S. location by name, see the <A HREF="../../dium.htm">Geographic Name Server</A>.
+
+<H3>Options:</H3>
+<UL>
+<LI>Zoom In: <A HREF="../../dium.htm" >(2)</A>,
+<A HREF="../../dium.htm" >(5)</A>,
+<A HREF="../../dium.htm" >(10)</A>,
+<A HREF="../../dium.htm" >(25)</A>;
+Zoom Out: <A HREF="../../0/0/27" >(1/2)</A>,
+<A HREF="../../0/0/27" >(1/5)</A>,
+<A HREF="../../0/0/27" >(1/10)</A>,
+<A HREF="../../0/0/27" >(1/25)</A>
+<LI>Features: <A HREF="../../dium.htm" >Default</A>, 
+<A HREF="../../dium.htm" >All</A>; 
+<A HREF="../../dium.htm" >-borders</A>, 
+<A HREF="../../dium.htm" >+rivers</A>
+<LI><A HREF="../../dium.htm">View Color Legend for world map</A>
+<LI>Display: <A HREF="../../dium.htm" >monochrome</A>; 
+Projection: <A HREF="../../0/0/27" >elliptical</A>, 
+<A HREF="../../dium.htm" >rectangular</A>, 
+<A HREF="../../dium.htm" >sinusoidal</A>;
+<A HREF="../../dium.htm" >Narrow</A>,
+<A HREF="../../dium.htm" >Square</A>
+<LI>Change Database to <A HREF="../../dium.htm" >USA only (more detail)</A>
+<LI><A HREF="../../dium.htm" >Hide Map Image</A>,
+<A HREF="../../dium.htm" >Retrieve Map Image Only</A>, 
+<A HREF="../../dium.htm" >No Zoom on Select</A>,
+<LI><A HREF="../../dium.htm" >Place mark at (0.00N 0.00E)</A>,
+<A HREF="../../0/0/26" >Reset All Options</A>
+</UL>
+Requested region is 360.00 deg. wide by 180.00 deg. (12420.00 miles) high.
+</UL>
+<HR>
+<ADDRESS>
+<A HREF="../../dium.htm"><IMG SRC="../../0/0/54.gif" ALT="[Best of the Web '94]"></A>
+<A HREF="../../dium.htm"><IMG SRC="../../0/0/55.gif" ALT="[Top 5% Web Site]"></A>
+<A HREF="../../dium.htm"><IMG SRC="../../0/0/56.gif" ALT="[Magellan 4-Star Site]"></A>
+Map Viewer provided by the
+<A HREF="../../0/0/24.htm">Xerox</A>
+<A HREF="../../0/0/25.htm">Palo Alto Research Center</A>
+</ADDRESS>
+<hr>
+<h6>Internet URL-
+ <a href= http://pubweb.parc.xerox.com:80/map/border=1/color=1>http://pubweb.parc.xerox.com:80/map/border=1/color=1 </a> </h6>

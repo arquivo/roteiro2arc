@@ -1,0 +1,256 @@
+<A name = 0>
+<html>
+<head> 
+<TITLE>O Servico X.500 na RCCN </TITLE>
+</head>
+<P>
+<IMG SRC="../../0/0/23.gif" > <P>Este documento faz parte do <A HREF="../../0/0/7.htm" 
+>servidor WWW do Servi&ccedil;o X.500 </A>da RCCN
+ 
+</hr>
+
+<body>
+
+<p>
+
+<h2> Introdu&ccedil;&atilde;o ao Servi&ccedil;o de Directoria X.500</h2>
+
+ Com o aumento exponencial do desenvolvimento tecnol&oacute;gico nos &uacute;ltimos anos,
+ cada vez &eacute; mais importante contactar pessoas ou entidades que possuam informa&ccedil;&atilde;o importante para o nosso neg&oacute;cio ou trabalho de investiga&ccedil;&atilde;o.
+
+<p>
+
+As modernas telecomunica&ccedil;&otilde;es, do telefone ao telefax, passando pelas
+comunica&ccedil;&otilde;es por computador, em muito contribuem para que uma pessoa possa
+contactar outra em qualquer parte do mundo, DESDE QUE A CONSIGA LOCALIZAR.
+
+<h2> Os servi&ccedil;os de Directoria existentes </h2>
+
+A banaliza&ccedil;&atilde;o das telecomunica&ccedil;&otilde;es tornou a quest&atilde;o da localiza&ccedil;&atilde;o num importante problema (como telefonar se n&atilde;o se sabe o n&uacute;mero de telefone
+do nosso interlocutor?).
+
+<p>
+
+Para tentar resolver esse problema, foram criadas as directorias. Uma directoria &eacute; uma base de dados organizada de forma a tornar a 
+consulta e manuten&ccedil;&atilde;o da informa&ccedil;&atilde;o simples e l&oacute;gica. O exemplo mais
+conhecido de directoria &eacute; a Lista Telef&oacute;nica, que nos permite encontrar
+facilmente o n&uacute;mero telefone de uma pessoa conhecido  o nome (p&aacute;ginas
+brancas), ou de uma organiza&ccedil;&atilde;o que forne&ccedil;a um certo tipo  de
+produto ou servi&ccedil;o (p&aacute;ginas amarelas).
+
+
+
+<p>
+
+No entanto, as directorias actuais apresentam alguns problemas que dificultam
+a localiza&ccedil;&atilde;o da informa&ccedil;&atilde;o. Atrav&eacute;s da lista telef&oacute;nica 
+
+<UL>
+<LI>S&oacute; &eacute; poss&iacute;vel saber o telefone de uma pessoa, conhecida a localidade onde reside
+<LI>Se existirem duas pessoas com o  mesmo nome na mesma localidade,
+ a distin&ccedil;&atilde;o s&oacute; pode ser feita se for conhecido o endere&ccedil;o
+<LI>A informa&ccedil;&atilde;o pode estar desactualizada mais de um ano.
+</ul>
+
+Uma tentativa de resolu&ccedil;&atilde;o do &uacute;ltimo problema &eacute; o servi&ccedil;o de informa&ccedil;&otilde;es que no entanto n&atilde;o &eacute;  disponibilizado sob a forma
+ de p&aacute;ginas amarelas.
+
+<p>
+
+Os outros tipos de directorias s&atilde;o ainda menos universais: n&atilde;o existe
+uma directoria com endere&ccedil;os postais. 
+
+<p>
+
+O Servi&ccedil;o de Directoria X.500 &eacute; uma tentativa para resolu&ccedil;&atilde;o deste tipo de problemas.
+ 
+<h2> O Servi&ccedil;o de Directoria X.500 </h2>
+
+A directoria X.500 permite o acesso a informa&ccedil;&atilde;o sobre pessoas e 
+organiza&ccedil;&otilde;es de todo o mundo com a mesma facilidade (salvaguardadas
+a quest&otilde;es relativas de conectividade e velocidade das linhas) com que se
+acede a informa&ccedil;&atilde;o sobre pessoas e organiza&ccedil;&otilde;es na mesma localidade.
+
+<p>
+
+Atrav&eacute;s do X.500 pode-se representar, para al&eacute;m de informa&ccedil;&atilde;o a respeito
+ de pessoas e organiza&ccedil;&otilde;es, pa&iacute;ses, regi&otilde;es, localidades, computadores,
+aplica&ccedil;&otilde;es, documentos, etc... Al&eacute;m disso, a directoria permite a
+cria&ccedil;&atilde;o e manuten&ccedil;&atilde;o de novos tipos de objectos.
+
+<p>
+
+Al&eacute;m do nome, endere&ccedil;o postal, telefone, muita mais informa&ccedil;&atilde;o pode ser
+inclu&iacute;da na descri&ccedil;&atilde;o duma pessoa: fax, telex, endere&ccedil;o
+de correio electr&oacute;nico etc ...
+
+<p>
+
+A directoria &eacute; uma aplica&ccedil;&atilde;o distribu&iacute;da em que cada organiza&ccedil;&atilde;o pode 
+manter e gerir a informa&ccedil;&atilde;o a seu respeito.
+
+<p>
+
+Os objectos podem ser localizados tanto  a partir do seu nome como de valores
+desejados para os seus atributos.
+
+<p>
+
+A informa&ccedil;&atilde;o est&aacute; organizada sob a forma hier&aacute;rquica a partir de uma
+raiz fict&iacute;cia. Seguem-se pa&iacute;ses, organiza&ccedil;&otilde;es e assim sucessivamente.
+ O procedimento para encontrar uma pessoa em Portugal &eacute; precisamente o mesmo
+que o usado para encontrar uma pessoa de qualquer outra nacionalidade.
+
+ <h2> X.500 </h2>
+
+ O utilizador da Directoria, pessoa ou aplica&ccedil;&atilde;o, acede &agrave; informa&ccedil;&atilde;o
+dispon&iacute;vel atrav&eacute;s dum programa especializado, o  DUA(Directory User Agent).  Este contacta um ou mais DSAs(Directory System Agents) para satisfazer os pedidos do utilizador.
+
+<p>
+
+
+Os DSAs s&atilde;o as entidades de aplica&ccedil;&atilde;o respons&aacute;veis por manter a informa&ccedil;&atilde;o da directoria actualizada e consistente e, responder aos pedidos
+ dos utilizadores feitos atrav&eacute;s dos DUAs. O funcionamento dos DSAs e a composi&ccedil;&atilde;o interna da Directoria s&atilde;o completamente transparentes aos
+ utilizadores.
+ 
+<p>
+
+ <h2> Modelo de Informa&ccedil;&atilde;o </h2>
+
+<p>
+
+A unidade fundamental usada para construir a Base de Informa&ccedil;&atilde;o de Directoria
+(DIB- Directory Information Base)   &eacute; a entrada . Uma entrada cont&eacute;m toda a informa&ccedil;&atilde;o relativa a um objecto (pessoa, organiza&ccedil;&atilde;o ou departamento, por exemplo).
+
+<p>
+
+Uma entrada &eacute; constitu&iacute;da por v&aacute;rios atributos, cada um dos quais cont&eacute;m determinado tipo de informa&ccedil;&atilde;o a respeito do objecto. Alguns exemplos de atributos s&atilde;o o nome, morada, n&uacute;mero de telefone. H&aacute; atributos que t&ecirc;m mais que um valor: uma pessoa pode ter mais que um n&uacute;mero de telefone, por exemplo.
+
+<p>
+
+O X.500 utiliza o conceito de classe de objecto para determinar que tipo de objecto representa uma entrada. A cada classe de objecto corresponde uma
+descri&ccedil;&atilde;o que cont&eacute;m uma lista de  atributos obrigat&oacute;rios e opcionais
+para cada entrada dessa classe. As classes de objectos est&atilde;o dispostas numa
+estrutura hier&aacute;rquica e podem herdar atributos da classe superior. A heran&ccedil;a facilita bastante a defini&ccedil;&atilde;o de novos objectos.
+
+<p>
+
+As entradas na directoria est&atilde;o organizadas hierarquicamente na &Aacute;rvore de
+Informa&ccedil;&atilde;o de Directoria(Directory Information Tree- DIT). Cada entrada ocupa uma posi&ccedil;&atilde;o na DIT. 
+
+<p>
+
+Por exemplo, o registo que representa a Universidade de Coimbra (UC) est&aacute; na sub-&aacute;rvore que representa Portugal (PT). A entrada para representar o Departamento de Engenharia Electrot&eacute;cnica (DEE) est&aacute; na sub-&aacute;rvore que representa a UC. Assim o   pai da UC &eacute; PT e um dos  filhos da UC  &eacute; o DEE. 
+
+<p>
+
+Uma entrada sem filhos &eacute; uma entrada  folha . A &uacute;nica entrada sem pai &eacute; a raiz da DIT, que tamb&eacute;m n&atilde;o tem atributos.
+
+<p>
+
+Cada entrada tem um ou mais atributos que constituem o seu Nome Relativamente
+Distinto (RDN- Relative Distinguished Name . O RDN de uma entrada permite distingui-lo dos seus irm&atilde;os. 
+
+<p> 
+
+ Para  identificar univocamente uma entrada na DIT utiliza-se o seu Nome Distinto(DN- Distiguished Name ). O DN duma entrada &eacute; a concatena&ccedil;&atilde;o dos RDNs das entradas percorridas desde a raiz at&eacute; essa entrada.
+
+<p>
+ 
+  <h2> Modelo  Funcional </h2>
+
+A DIB &eacute; uma base de dados distribu&iacute;da. Cada DSA mant&eacute;m um conjunto de entradas, normalmente uma sub-&aacute;rvore da DIT. Os DSAs comunicam entre si para manter a consist&ecirc;ncia da DIT e para satisfazer os pedidos dos utilizadores.
+ 
+ <h2> Modelo de Seguran&ccedil;a </h2> 
+
+O modelo de seguran&ccedil;a engloba pol&iacute;ticas de autentica&ccedil;&atilde;o usadas para identificar tanto utilizadores  da directoria e pol&iacute;ticas de autoriza&ccedil;&otilde;es que controlam o acesso &agrave; informa&ccedil;&atilde;o na Directoria.
+
+<p>
+
+ Existem tr&ecirc;s tipos de autentica&ccedil;&atilde;o : nenhuma, fraca (por password) e
+forte (usando t&eacute;cnicas criptogr&aacute;ficas).
+
+<p>
+
+A pol&iacute;tica de autoriza&ccedil;&otilde;es especifica os direitos de acesso. Uma forma comum de implementar pol&iacute;ticas de autoriza&ccedil;&atilde;o &eacute; manter uma lista
+de controlo de acessos (ACL-Access Control List ) que indica que
+ac&ccedil;&otilde;es podem ser executadas sobre cada entrada por cada utilizador.
+
+
+<h2> Uso dos Servi&ccedil;os de Directoria </h2>
+
+O utilizador pode interagir com a Directoria de duas formas:
+<ul>
+<li>Modificar a informa&ccedil;&atilde;o existente, alterando atributos de uma entrada
+ou removendo e adicionando entradas.
+<li>Consultar a informa&ccedil;&atilde;o na Directoria. Essa consulta pode ser feita de
+ v&aacute;rias formas:
+ <ul>
+ <li>  Servi&ccedil;o de P&aacute;ginas Brancas --- neste caso o utilizador fornece indicacoes sobre o nome distinto da entrada e a Directoria devolve as entradas  cujos nomes cumpram essas indica&ccedil;&otilde;es.
+  <li>  Servi&ccedil;o de P&aacute;ginas Amarelas --- o utilizador fornece &agrave;
+   Directoria indica&ccedil;&otilde;es sobre o valor de alguns atributos das entradas
+   pretendidas e a Directoria devolve as entradas cujos atributos cumpram os
+   requisitos estipulados.
+   <li>  Navegar na Directoria (Browsing) --- este modo permite ao utilizador percorrer a Directoria at&eacute; encontrar eventualmente a informa&ccedil;&atilde;o
+ pretendida. 
+</ul>
+</ul>
+
+ <h2> Aplica&ccedil;&otilde;es da Directoria </h2>
+
+A aplica&ccedil;&atilde;o mais divulgada  da Directoria  &eacute; o servi&ccedil;o de P&aacute;ginas Brancas e P&aacute;ginas amarelas relativamente a pessoas e aplica&ccedil;&otilde;es: 
+ <ul>
+ <li>Relativamente a pessoas os atributos como endere&ccedil;o de e-mail,
+       telefone, fax,  certificado de chave p&uacute;blica (para aplica&ccedil;&otilde;es
+       tipo mail confidencial, por exemplo) s&atilde;o os mais utilizados.
+  <li>Relativamente a aplica&ccedil;&otilde;es o servi&ccedil;o mais pretendido &eacute; dos
+        servidores de nomes tradicionais --- tradu&ccedil;&atilde;o de nome em endere&ccedil;os
+        de apresenta&ccedil;&atilde;o.
+  </ul>
+
+ Para uma grande organiza&ccedil;&atilde;o, a utiliza&ccedil;&atilde;o da Directoria poder&aacute; ter uma certa import&acirc;ncia interna : mapear a estrutura da organiza&ccedil;&atilde;o numa base de
+dados e garantir que a informa&ccedil;&atilde;o adequada &eacute; disponibilizada &agrave;s pessoas
+ certas. Uma PME estar&aacute; mais interessada em utilizar a Directoria para divulgar a sua actividade junto da mais vasta audi&ecirc;ncia poss&iacute;vel.
+
+Actualmente a Directoria &eacute; largamente utilizada pela comunidade de I&D
+de todo o mundo. Algumas empresas encontraram na Directoria um meio para a divulga&ccedil;&atilde;o de produtos e presta&ccedil;&atilde;o de apoio a clientes. 
+
+Existem actualmente projectos piloto que envolvem a utiliza&ccedil;&atilde;o da Directoria 
+para :
+ <ul>
+ <li>Encaminhamento de mensagens de MHS(Message Handling Service), num papel similar prestado pelos MX(Mail eXchanger) Records do 
+ DNS(Domain Name System, o nameservice da Internet) ao SMTP(Simple Mail Tranfer
+ Protocol, da Internet).
+ <li>Suporte de servi&ccedil;os de
+       seguran&ccedil;a baseados em criptografia de chave p&uacute;blica.
+ <li> Localiza&ccedil;&atilde;o de arquivos de documenta&ccedil;&atilde;o e bases de dados.
+ <li>Representa&ccedil;&atilde;o de informa&ccedil;&atilde;o sobre  redes  IP e topologias
+       de subrede.
+ <li> Representa&ccedil;&atilde;o de informa&ccedil;&atilde;o sobre os mais
+         diversos objectos de rede e a sua utiliza&ccedil;&atilde;o nos mais
+         variados contextos.
+  <li>Integra&ccedil;&atilde;o da Directoria com outros servi&ccedil;os de informa&ccedil;&atilde;o
+        da Internet.
+  </ul>
+
+
+<ADDRESS>
+<hr>
+<A HREF="../../dium.htm">www</A>
+<!%%DateLastModified>Page last modified:Fri Jul 22 17:33:23 BST 1994
+<!%%EndDate LastModified>
+<hr>
+</ADDRESS>
+
+
+</body>
+</html>   
+ 
+   
+   
+
+
+ 
+<hr>
+<h6>Internet URL-
+ <a href= http://info.uminho.pt:80/x500intro.html>http://info.uminho.pt:80/x500intro.html </a> </h6>

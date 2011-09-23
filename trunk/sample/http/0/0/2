@@ -1,0 +1,33 @@
+<A name = 1>
+<HEAD>
+<TITLE>Archie Search</TITLE>
+
+<IMG SRC="../../0/0/3.gif">
+INESC - Instituto de Engenharia de Sistemas e Computadores <HR>
+<H1>Archie Search</H1>
+
+<ISINDEX>
+</HEAD>
+<BODY>
+
+This is a simplified gateway to the archie database. Enter the string you wish
+to search for.
+<P>
+<HR>
+<H2>What is archie ?</H2>
+<QUOTE>
+ "Archie" is a database of anonymous ftp sites and their contents.
+   The software for it was written by the "Archie Group" (Peter
+   Deutsch, Alan Emtage, Bill Heelan, and Mike Parker) at McGill
+   University in Montreal, Canada, and they maintain the database as
+   well.
+<P>
+
+   "Archie" keeps track of the entire contents of a very large number
+   of anonymous ftp sites, and allows you to search for files on those
+   sites using various different kinds of filename searches.
+</QUOTE>
+</BODY>
+<hr>
+<h6>Internet URL-
+ <a href= http://archie.inesc.pt:80/cgi-bin/AA>http://archie.inesc.pt:80/cgi-bin/AA </a> </h6>
