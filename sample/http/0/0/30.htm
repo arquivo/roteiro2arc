@@ -1,0 +1,144 @@
+<A name = 0>
+<TITLE>PARC Map Viewer Details</TITLE>
+<H1>Map Viewer Technical Details</H1>
+See also:
+<A HREF="../../0/0/28.htm" >About the Map Viewer</A> and
+<A HREF="../../0/0/29.htm" >Frequently Asked Questions</A>.
+<P>
+The <A HREF="../../dium.htm" >Map Viewer</A>
+is implemented as as a
+<A HREF="../../dium.htm" >perl</A>
+script that accepts requests for map renderings and returns an
+<A HREF="../../dium.htm">HTML</A>
+document including an inlined GIF image of the requested map.
+It is running as part of a custom inetd-invoked
+<A HREF="../../dium.htm">HTTP</A>
+daemon running on the host pubweb.parc.xerox.com at the Xerox Palo Alto Research Center in California.
+<P>
+The map images are generated on the fly by the
+<A HREF="../../dium.htm" >mapwriter</A> program
+which is a stand-alone Unix command which produces raster map images
+from either of two publically available vector map databases.  Options
+controlling the map renderings are encoded into the W3
+<A HREF="../../dium.htm">URL</A>
+strings and passed as command line arguments to the mapwriter program.
+Efficient conversion to GIF format is provided by a program called <EM>rastogif</EM> contributed by James Woods (jaws@dme.nt.gov.au).
+A small static cache is used for a few of the most frequently requested map images.
+<P>
+For a list of the colors used for various map features, see
+<A HREF="../../dium.htm" >World Map Legend</A>
+and <A HREF="../../dium.htm" >U.S.A. Map Legend</A>.
+
+<H2>URL Format</H2>
+Map rendering options are encoded into the URL by separating each
+option with a slash (/) and within each option separating the option
+name from its value by an equals (=).  Thus the URLs take the form:
+<P>
+<B>
+http://<I:80/>hostname</I>/map/<I>option</I>=<I>value</I>/.../<I>option</I>=<I>value</I>
+</B>
+<H2><A NAME=OPTIONS>Rendering Options</A></H2>
+The following map rendering options are currently recognized by the Map Viewer server.
+<DL>
+<DT><B>/db=<I>database_name</I></B>
+    <DD>the database name, either <B>world</B> or <B>usa</B>
+<DT><B>/lat=<I>latitude_center</I></B>
+    <DD>the center latitude for the map in degrees (negative for south, default 0)
+<DT><B>/lon=<I>longitude_center</I></B>
+    <DD>the center longitude for the map in degrees (negative for west, default 0)
+<DT><B>/ht=<I>latitude_extent</I></B>
+    <DD>the height of the map in degrees (default 180)
+<DT><B>/wd=<I>longitude_extent</I></B>
+    <DD>the width of the map in degrees (default 360)
+<DT><B>/iwd=<I>image_width</I></B>
+    <DD>the width of the map image in pixels (default 512)
+<DT><B>/iht=<I>image_height</I></B>
+    <DD>the height of the map image in pixels (default 256)
+<DT><B>/color</B>
+    <DD>generate color raster images
+<DT><B>/bw</B>
+    <DD>generate monochrome bitmaps (default)
+<DT><B>/noview</B>
+    <DD>do not show the map as an inlined image (speeds up changing options)
+<DT><B>/view</B>
+    <DD>show the map as an inlined image (default)
+<DT><B>/nozoom</B>
+    <DD>do not zoom in on position selections
+<DT><B>/autozoom=<I>zoom_factor</I></B>
+    <DD>change the zoom factor for position selections
+<DT><B>/all</B>
+    <DD>show all map featues
+<DT><B>/def</B>
+    <DD>show default map featues
+<DT><B>/<I>feature_name</I></B>
+    <DD>show the named feature (e.g. coast, border, river, road, RR, fed.)
+<DT><B>/<I>feature_name</I>=0</B>
+    <DD>do not show the named feature
+<DT><B>/nogrid</B>
+    <DD>do not show the map graticule (lines of latitude/longetude)
+<DT><B>/grid</B>
+    <DD>show the graticule unless zoomed very far in (default)
+<DT><B>/mark=<I>latitude</I>,<I>longitude</I>,<I>mark_type</I>,<I>mark_size</I></B>
+    <DD>place a mark on the map.
+    ",<I>mark_type</I>" (1..7) and ",<I>mark_size</I>" (in pixels) are optional.
+    multiple marks can be separated by ";" (see <A HREF=#MARKEX>example</A> below).
+<DT><B>?<I>xpos</I>,<I>ypos</I></B>
+    <DD>specifies a position selection within a map image in pixel coordinates
+    (generated from ISMAP inlined images).
+    This must occur last in the URL.
+<DT><B>/format=.gif</B>
+    <DD>used when requesting just an image, rather than an HTML document.
+    This must occur last in the URL.
+</DL>
+If the same option occurs more than once, the last setting prevails.
+Options may also be specified in a search query field (i.e. following
+a "?" in the URL) separated by "/" or "+" (i.e. spaces in the user's
+query).  See the <A HREF=#QUERYEX>example</A> below.
+
+<H2><A NAME=EXAMPLES>URL Examples</A></H2>
+<DL>
+
+<DT><A HREF="../../dium.htm" >/map</A>
+    <DD>Produces the default world map image in a hypertext document.
+
+<DT><A HREF="../../dium.htm" >/map/format=.gif</A>
+    <DD>Produces just the GIF image (displayed in a separate viewer in Mosaic).
+
+<DT><A HREF="../../dium.htm" >/map/db=usa/color/ht=1/wd=2/lat=37.8/lon=-122</A>
+    <DD>A map of the San Francisco Bay Area.
+
+<DT><A NAME=QUERYEX HREF="../../dium.htm" >/map/db=usa/color/ht=1/wd=2/lat=37.8/lon=-122?ht=.5+wd=1</A>
+    <DD>The same map with the map scale overridden from the search query field.
+
+<DT><A HREF="../../dium.htm" >/map/lat=-40.60/lon=-172.35/ht=15/wd=12/iht=150/iwd=128</A>
+    <DD>A small map of New Zealand.
+
+<DT><A NAME=MARKEX HREF="../../dium.htm" >/map/color/mark=37.40,-122.14;21.35,-157.97</A>
+    <DD>Specifies marks for Palo Alto, California and Pearl Harbor, Hawaii.
+
+</DL>
+<H2><A NAME=BUGS>Bugs</A></H2>
+
+<UL>
+<LI>A scrambled image results for values of iwd that are not a multiple of 8 (e.g. <A HREF="../../dium.htm" >iwd=100</A>).  <I>The server has been patched to round up widths</I>.
+
+<LI>The "Requested region" reported will be smaller than the displayed region if the image aspect ratio does not match the latitude/longitude extent (in degrees).
+
+<LI>Meridian lines are displayed relative to the center longitude of the current map, rather than at standard multiples of degrees.
+
+</UL>
+
+<H2><A NAME=ENHANCEMENTS>Enhancements</A></H2>
+<UL>
+<LI>This interface does not take advantage of the HTML/HTTP extensions
+for fill-in-the-blank forms.
+
+</UL>
+
+Please send questions or comments to
+<A HREF="../../dium.htm">webmaster@xerox.com</A>.
+<P>
+<ADDRESS>02-Jun-95</ADDRESS>
+<hr>
+<h6>Internet URL-
+ <a href= http://www.xerox.com:80/PARC/docs/mapviewer-details.html>http://www.xerox.com:80/PARC/docs/mapviewer-details.html </a> </h6>
